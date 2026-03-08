@@ -1,13 +1,31 @@
-<h1>Login</h1>
+<div class="row justify-content-center">
+  <div class="col-md-6 col-lg-4">
+    <div class="card shadow-sm mt-5">
+      <div class="card-body p-4">
+        <h1 class="h3 mb-4 text-center">Login</h1>
 
-<form action="/sessions" method="post">
-  <p>
-    <label for="email">Email</label>
-    <input type="text" name="email" id="email">
+        <form action="/sessions" method="post">
+          <%= csrf_meta_tags %>
 
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password">
-  </p>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="name@example.com">
+          </div>
 
-  <button>Login</button>
-</form>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" id="password" class="form-control">
+          </div>
+
+          <div class="d-grid">
+            <button class="btn btn-primary">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="text-center mt-3">
+      <p class="small text-muted">Don't have an account? <a href="/users/new">Sign up</a></p>
+    </div>
+  </div>
+</div>
